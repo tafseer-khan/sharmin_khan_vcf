@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Automatic VCF Download</title>
+    <script>
+        function downloadVCF() {
+            var a = document.createElement("a");
+            a.href = './sk.vcf'; 
+            a.download = 'contact.vcf'; 
+            a.style.display = 'none';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+        window.onload = downloadVCF; 
+    </script>
+</head>
+</html>
